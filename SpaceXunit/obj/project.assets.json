@@ -2,6 +2,55 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "AutoMapper/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DiffEngine/11.3.0": {
+        "type": "package",
+        "dependencies": {
+          "EmptyFiles": "4.4.0",
+          "System.Management": "6.0.1"
+        },
+        "compile": {
+          "lib/net7.0/DiffEngine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/DiffEngine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EmptyFiles/4.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/EmptyFiles.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/EmptyFiles.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EmptyFiles.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/7.0.5": {
         "type": "package",
         "dependencies": {
@@ -20,6 +69,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
@@ -43,6 +101,26 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Shouldly/4.2.1": {
+        "type": "package",
+        "dependencies": {
+          "DiffEngine": "11.3.0",
+          "EmptyFiles": "4.4.0"
+        },
+        "compile": {
+          "lib/net5.0/Shouldly.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Shouldly.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Shouldly.targets": {}
         }
       },
       "Swashbuckle.AspNetCore/6.4.0": {
@@ -107,10 +185,168 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "System.CodeDom/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Management/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/12.0.1": {
+      "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "type": "package",
+      "path": "automapper/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "DiffEngine/11.3.0": {
+      "sha512": "k0ZgZqd09jLZQjR8FyQbSQE86Q7QZnjEzq1LPHtj1R2AoWO8sjV5x+jlSisL7NZAbUOI4y+7Bog8gkr9WIRBGw==",
+      "type": "package",
+      "path": "diffengine/11.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "diffengine.11.3.0.nupkg.sha512",
+        "diffengine.nuspec",
+        "icon.png",
+        "lib/net461/DiffEngine.dll",
+        "lib/net461/DiffEngine.xml",
+        "lib/net48/DiffEngine.dll",
+        "lib/net48/DiffEngine.xml",
+        "lib/net5.0/DiffEngine.dll",
+        "lib/net5.0/DiffEngine.xml",
+        "lib/net6.0/DiffEngine.dll",
+        "lib/net6.0/DiffEngine.xml",
+        "lib/net7.0/DiffEngine.dll",
+        "lib/net7.0/DiffEngine.xml",
+        "lib/netcoreapp2.0/DiffEngine.dll",
+        "lib/netcoreapp2.0/DiffEngine.xml",
+        "lib/netcoreapp2.1/DiffEngine.dll",
+        "lib/netcoreapp2.1/DiffEngine.xml",
+        "lib/netcoreapp3.0/DiffEngine.dll",
+        "lib/netcoreapp3.0/DiffEngine.xml",
+        "lib/netcoreapp3.1/DiffEngine.dll",
+        "lib/netcoreapp3.1/DiffEngine.xml",
+        "lib/netstandard2.0/DiffEngine.dll",
+        "lib/netstandard2.0/DiffEngine.xml",
+        "lib/netstandard2.1/DiffEngine.dll",
+        "lib/netstandard2.1/DiffEngine.xml"
+      ]
+    },
+    "EmptyFiles/4.4.0": {
+      "sha512": "gwJEfIGS7FhykvtZoscwXj/XwW+mJY6UbAZk+qtLKFUGWC95kfKXnj8VkxsZQnWBxJemM/q664rGLN5nf+OHZw==",
+      "type": "package",
+      "path": "emptyfiles/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EmptyFiles/archive/empty.7z",
+        "EmptyFiles/archive/empty.bz2",
+        "EmptyFiles/archive/empty.gz",
+        "EmptyFiles/archive/empty.tar",
+        "EmptyFiles/archive/empty.xz",
+        "EmptyFiles/archive/empty.zip",
+        "EmptyFiles/document/empty.docx",
+        "EmptyFiles/document/empty.odt",
+        "EmptyFiles/document/empty.pdf",
+        "EmptyFiles/document/empty.rtf",
+        "EmptyFiles/image/empty.avif",
+        "EmptyFiles/image/empty.bmp",
+        "EmptyFiles/image/empty.dds",
+        "EmptyFiles/image/empty.dib",
+        "EmptyFiles/image/empty.emf",
+        "EmptyFiles/image/empty.exif",
+        "EmptyFiles/image/empty.gif",
+        "EmptyFiles/image/empty.heic",
+        "EmptyFiles/image/empty.heif",
+        "EmptyFiles/image/empty.ico",
+        "EmptyFiles/image/empty.j2c",
+        "EmptyFiles/image/empty.jfif",
+        "EmptyFiles/image/empty.jp2",
+        "EmptyFiles/image/empty.jpc",
+        "EmptyFiles/image/empty.jpe",
+        "EmptyFiles/image/empty.jpg",
+        "EmptyFiles/image/empty.jxr",
+        "EmptyFiles/image/empty.pbm",
+        "EmptyFiles/image/empty.pcx",
+        "EmptyFiles/image/empty.pgm",
+        "EmptyFiles/image/empty.png",
+        "EmptyFiles/image/empty.ppm",
+        "EmptyFiles/image/empty.rle",
+        "EmptyFiles/image/empty.tga",
+        "EmptyFiles/image/empty.tif",
+        "EmptyFiles/image/empty.wdp",
+        "EmptyFiles/image/empty.webp",
+        "EmptyFiles/image/empty.wmp",
+        "EmptyFiles/sheet/empty.ods",
+        "EmptyFiles/sheet/empty.xlsx",
+        "EmptyFiles/slide/empty.odp",
+        "EmptyFiles/slide/empty.pptx",
+        "build/EmptyFiles.targets",
+        "buildTransitive/EmptyFiles.targets",
+        "emptyfiles.4.4.0.nupkg.sha512",
+        "emptyfiles.nuspec",
+        "icon.png",
+        "lib/net461/EmptyFiles.dll",
+        "lib/net461/EmptyFiles.xml",
+        "lib/net5.0/EmptyFiles.dll",
+        "lib/net5.0/EmptyFiles.xml",
+        "lib/net6.0/EmptyFiles.dll",
+        "lib/net6.0/EmptyFiles.xml",
+        "lib/net7.0/EmptyFiles.dll",
+        "lib/net7.0/EmptyFiles.xml",
+        "lib/netstandard2.0/EmptyFiles.dll",
+        "lib/netstandard2.0/EmptyFiles.xml",
+        "lib/netstandard2.1/EmptyFiles.dll",
+        "lib/netstandard2.1/EmptyFiles.xml"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/7.0.5": {
       "sha512": "yxFvk9BsgL/eDJVsPp0zbUpL73u9uXLYTnWoMBvnJdm8+970YuhM2XWcDOyetjkp8l8z00MHgfYHCRXOnLx/+Q==",
       "type": "package",
@@ -124,6 +360,75 @@
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
         "microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "type": "package",
+      "path": "microsoft.csharp/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -371,6 +676,23 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Shouldly/4.2.1": {
+      "sha512": "dKAKiSuhLKqD2TXwLKtqNg1nwzJcIKOOMncZjk9LYe4W+h+SCftpWdxwR79YZUIHMH+3Vu9s0s0UHNrgICLwRQ==",
+      "type": "package",
+      "path": "shouldly/4.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "assets/logo_128x128.png",
+        "buildTransitive/Shouldly.targets",
+        "lib/net5.0/Shouldly.dll",
+        "lib/net5.0/Shouldly.xml",
+        "lib/netstandard2.0/Shouldly.dll",
+        "lib/netstandard2.0/Shouldly.xml",
+        "shouldly.4.2.1.nupkg.sha512",
+        "shouldly.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "sha512": "eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "type": "package",
@@ -451,11 +773,64 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "System.CodeDom/6.0.0": {
+      "sha512": "CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
+      "type": "package",
+      "path": "system.codedom/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.CodeDom.dll",
+        "lib/net461/System.CodeDom.xml",
+        "lib/net6.0/System.CodeDom.dll",
+        "lib/net6.0/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.6.0.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Management/6.0.1": {
+      "sha512": "10J1D0h/lioojphfJ4Fuh5ZUThT/xOVHdV9roGBittKKNP2PMjrvibEdbVTGZcPra1399Ja3tqIJLyQrc5Wmhg==",
+      "type": "package",
+      "path": "system.management/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Management.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/_._",
+        "lib/net6.0/System.Management.dll",
+        "lib/net6.0/System.Management.xml",
+        "lib/netcoreapp3.1/System.Management.dll",
+        "lib/netcoreapp3.1/System.Management.xml",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net6.0/System.Management.dll",
+        "runtimes/win/lib/net6.0/System.Management.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Management.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Management.xml",
+        "system.management.6.0.1.nupkg.sha512",
+        "system.management.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "AutoMapper >= 12.0.1",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
+      "Shouldly >= 4.2.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -504,9 +879,17 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.5, )"
+          },
+          "Shouldly": {
+            "target": "Package",
+            "version": "[4.2.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
